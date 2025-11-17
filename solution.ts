@@ -107,7 +107,6 @@ const getUniqueValues = (
     
 }
 
-
 const calculateTotalPrice = <T extends Product>(products: T[]): number => {
     return products.reduce((acc, product) => {
         
