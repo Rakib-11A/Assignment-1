@@ -1,4 +1,4 @@
-// Problem : 1
+
 const formatValue = <T>(value: T) => {
     if(typeof value === 'string'){
         return value.toUpperCase();
@@ -9,13 +9,12 @@ const formatValue = <T>(value: T) => {
     else return !value;
 }
 
-// Problem : 2
+
 const getLength = <T>(value: T) => {
     if(typeof value === 'string' || Array.isArray(value))
         return value.length;
 }
 
-// Problem : 3
 class Person {
     name: string;
     age: number;
@@ -28,17 +27,17 @@ class Person {
     }
 }
 
-// Problem : 4
+
 const filterByRating = <T extends { rating: number}>(items: Array<T>): Array<T> => {
     return items.filter((item) => item.rating >= 4);
 }
 
-// Problem : 5
+
 const filterActiveUsers = <T extends { isActive: boolean}>(users: T[]): T[] => {
     return users.filter(user => user.isActive);
 }
 
-// Problem : 6
+
 const printBookDetails = (myBook: Book): void => {
     console.log(`Title: ${myBook.title}, Author: ${myBook.author}, Published: ${myBook.publishedYear}, Available: ${myBook.isAvailable ? "Yes" : "No"}`);
 }
@@ -49,7 +48,7 @@ interface Book {
     isAvailable: boolean;
 }
 
-// Problem : 7
+
 const checFinalkUnique = (
     a: (number | string)[],
     b: (number | string)[]
@@ -108,7 +107,7 @@ const getUniqueValues = (
     
 }
 
-// Problem : 8
+
 const calculateTotalPrice = <T extends Product>(products: T[]): number => {
     return products.reduce((acc, product) => {
         
@@ -127,10 +126,3 @@ interface Product {
     quantity: number;
     discount?: number;
 }
-const products = [
-  { name: 'Pen', price: 10, quantity: 2 },
-  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
-  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
-];
-
-console.log(calculateTotalPrice(products));
