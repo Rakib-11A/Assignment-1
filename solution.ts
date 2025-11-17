@@ -9,10 +9,10 @@ const formatValue = <T>(value: T) => {
     else return !value;
 }
 
-
-const getLength = <T>(value: T) => {
-    if(typeof value === 'string' || Array.isArray(value))
+const getLength = (value: (string | number[])): number => {
+    if(typeof value === "string" || Array.isArray(value))
         return value.length;
+    return 0;
 }
 
 class Person {
@@ -23,7 +23,7 @@ class Person {
         this.age = age;
     }
     getDetails(){
-        return `Name: ${this.name}, Age: ${this.age}`;
+        return `\'Name: ${this.name}, Age: ${this.age}\'`;
     }
 }
 
@@ -36,7 +36,6 @@ const filterByRating = <T extends { rating: number}>(items: Array<T>): Array<T> 
 const filterActiveUsers = <T extends { isActive: boolean}>(users: T[]): T[] => {
     return users.filter(user => user.isActive);
 }
-
 
 const printBookDetails = (myBook: Book): void => {
     console.log(`Title: ${myBook.title}, Author: ${myBook.author}, Published: ${myBook.publishedYear}, Available: ${myBook.isAvailable ? "Yes" : "No"}`);

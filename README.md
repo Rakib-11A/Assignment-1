@@ -35,15 +35,20 @@ Question 5: Provide an example of using union and intersection types in TypeScri
 
 Answer:
 
-Union Type: This is a such kind of type, which can get single type from two or more type.
+ইউনিয়ন টাইপঃ
+ইউনিয়ন টাইপ হল এমন একধরনের টাইপ যা এক বা একাধিক টাইপের যেকোনো একটি মান নিতে পারে।
+ইউনিয়ন টাইপে | চিহ্ন ব্যবহার করা হয়।
 
-example:
+উদাহরণঃ
 let userId: string | number;
 userId = "101";
 userId = 101;
 
-Intersection Type: Can get all property from two or more types.
+ইন্টারসেকশন টাইপঃ
+ইন্টারসেকশন টাইপ হল এমন একটি টাইপ যা একাধিক টাইপের সব বৈশিষ্ট্য একসাথে নেয়।
+ইন্টারসেকশন টাইপে & চিহ্ন ব্যবহার করা হয়।
 
+উদাহরনঃ
 type Person = {
 name: string;
 age: number;
